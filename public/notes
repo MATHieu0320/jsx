@@ -1,0 +1,6 @@
+npm create vite@latest ./
+yes (y)
+nom du fichier
+select react 
+avec du js
+npm i 
