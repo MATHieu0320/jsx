@@ -1,9 +1,11 @@
 import { Fragment, useState } from 'react'
+import echec from "../IMG/echec.jpg"
 
 import viteLogo from '/vite.svg'
 function Title({color,children}) {
   return <h1 style={{color}}> {children} </h1>
 }
+
 const showh2 = true;
 // false je vois pas true je vois le h4
 const h1 = "bonsoir";
@@ -23,7 +25,7 @@ const Handleclick = ( e) =>{
 }
   return (
 
-<Fragment>t_
+<Fragment>
 <Title color={"red"} children={"titre active"}  />
     <h1 onClick={Handleclick} id='Logo' style={styleH1}> {h1} </h1>
     {showh2 && <h2>cv bien</h2>}
@@ -35,8 +37,10 @@ const Handleclick = ( e) =>{
       : "si c est false"  } 
  <span>Result global : {tableau.reduce((a,b) => a + b)} </span>
       <ul >
-     {todos.map((todo) => (<li key={todo}> {todo} </li>))} 
+     {todos.map((todo) => <li key={todo}> {todo} </li>)}
       </ul>
+
+   <img src= {echec} alt="vitejs"  />
    </Fragment>
    
   //  <div className="div">
