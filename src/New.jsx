@@ -35,7 +35,7 @@ console.log(person);
       <Fragment>
  
  <p>compteur : {count } ,{person.age} </p>
-<button style={{height: "30px", width: "100px"}} onClick={incremant}>Ajouter 1</button>
+{/* <button style={{height: "30px", width: "100px"}} onClick={incremant}>Ajouter 1</button> */}
   <DivBleuBlancRouge background={"blue"} nomCouleur={"bleu"} />
   <DivBleuBlancRouge background={"white"} nomCouleur={"blanc"} />
   <DivBleuBlancRouge background={"red"} nomCouleur={"rouge"} />

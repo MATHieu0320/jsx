@@ -19,7 +19,8 @@ const Form = () => {
     }
     return (
   <form onSubmit={HandLeSubmit} >
-    <input type="text" name="firstname" value={firstname} onChange={handlechange} disabled= {!checked}  />
+    <label htmlFor="email">Email</label>
+    <input type="text" name="firstname" value={firstname} onChange={handlechange} disabled= {!checked} id='email' />
     {/* <input type="text" name="second" /> */}
 
     <input type="checkbox" checked = {checked} onChange={togglecheck} />

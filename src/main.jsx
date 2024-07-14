@@ -4,13 +4,18 @@ import App from './App.jsx'
 import New from './New.jsx'
 import Form from './Form.jsx'
 import ApprendreFormulaire from './ApprendreFormulaire.jsx'
+
+import CheckedFlux from './CheckedFlux.jsx'
+
 import "../styles/components/_settings..scss"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
     <New />
+    <Form/>
     <ApprendreFormulaire/>
+ <CheckedFlux/>
   <Form/>
    
   </React.StrictMode>,
