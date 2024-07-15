@@ -52,5 +52,4 @@ const Handleclick = ( e) =>{
 
   )
 }
-
-export default App
+export default App;

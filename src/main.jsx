@@ -4,6 +4,8 @@ import App from './App.jsx'
 import New from './New.jsx'
 import Form from './Form.jsx'
 import ApprendreFormulaire from './ApprendreFormulaire.jsx'
+import TpReact from './TpReact.jsx'
+
 
 import CheckedFlux from './CheckedFlux.jsx'
 
@@ -15,9 +17,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <New />
     <Form/>
     <ApprendreFormulaire/>
- <CheckedFlux/>
-  <Form/>
+ <CheckedFlux/><Form/>
    
+ <TpReact/>
+  
   </React.StrictMode>,
 )
 

@@ -1,0 +1,17 @@
+.Formulaire {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    input {
+      padding: 10px;
+    }
+  }
+}
