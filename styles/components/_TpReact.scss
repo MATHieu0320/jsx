@@ -1,3 +1,6 @@
+.TPreact {
+  max-width: 450px;
+}
 .Formulaire {
   background-color: white;
   display: flex;
@@ -9,9 +12,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 65%;
     input {
       padding: 10px;
     }
+  }
+}
+
+main {
+  min-width: 250px;
+  h1 {
+    text-align: center;
+  }
+  padding: 20px;
+  background-color: white;
+  h3 {
+    font-size: 1rem;
+  }
+  .ProduitsElements h1 {
+    background-color: white;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 0 20px;
   }
 }

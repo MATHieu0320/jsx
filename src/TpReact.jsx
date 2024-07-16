@@ -4,6 +4,9 @@ import "../styles/components/_TpReact.scss"
 
 
 const TpReact = () => {
+
+
+
     const PRODUCTS = [  
     {category: "Fruits", price: "$1", stocked: true, name: "Apple"},  
     {category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit"},  
@@ -12,13 +15,19 @@ const TpReact = () => {
     {category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin"},  
     {category: "Vegetables", price: "$1", stocked: true, name: "Peas"}  
 ]
+function MetEnRougePlusGrosPrix(prix1,prix2,prix3) {
+  
+//  let tab = []
+// tab.push(prix1,prix2,prix3)
+// console.log(tab);
+    
+}
+MetEnRougePlusGrosPrix(PRODUCTS[0].price,PRODUCTS[1].price,PRODUCTS[2].price)
+
 
 const  [Check , SetCheck] = useState(false)
 
-const Checker = () => {
-    SetCheck(!Check)
-    console.log(Check);
-}
+
 const Form = () => {
       return <div className='Formulaire' >
             <input type="text" placeholder='Rechercher' />
@@ -29,25 +38,68 @@ const Form = () => {
         </div>
 }
 
-const Produits = (element,ingredient , prix) => {
-    return  <div>
-<h1 > `${element}` </h1>
-<div style={{background: "gray" ,  padding: " 0 20px"}} >
-  <div ></div>
-  <div ></div>
-  <div ></div>
+const Produits = ({texte,texte2,ingredient , prix}) => {
+    return  <main>
+<h1 > {texte} </h1>
+<div className='ProduitsElements' >
+  <div className='flex' style={{background: "gray"}} >
+    <h3 > {ingredient} </h3>
+    <span> {prix} </span>
+  </div>
+  <div className='flex'>
+   <h3> {PRODUCTS[1].name} </h3>
+    <span> {PRODUCTS[1].price} </span>
+  </div>
+  <div className='flex'>
+  <h3> {PRODUCTS[2].name} </h3>
+    <span> {PRODUCTS[2].price} </span>
+  </div>
+  <h1> {texte2} </h1>
+    <div className='flex' style={{background: "gray"}}>
+    <h3 > {PRODUCTS[3].name} </h3>
+    <span> {PRODUCTS[3].price} </span>
+  </div >
+  <div className='flex'> 
+  
+   <h3>   {PRODUCTS[4].name} </h3>
+    <span> {PRODUCTS[4].price} </span>
+  </div>
+  <div  className='flex'>
+  <h3> {PRODUCTS[5].name} </h3>
+    <span> {PRODUCTS[5].price} </span>
+  </div>
 </div>
 
-    </div>
+    </main>
        
 
     
 }
+const Checker = () => {
+  SetCheck(!Check)
+console.log(Check);
+if (Check === true) {
+     for(let i = 0; i < PRODUCTS.length; i++) {
+   
+   if (PRODUCTS[i].stocked == true) {
+
+return <Produits ingredient={PRODUCTS[i].name} prix={PRODUCTS[i].price}/>
+
+
+   }
+    }
+}
+
+ 
+}
     return (
     
 <div className='TPreact'>
-         <Form  />
-<Produits element = "b"/>
+    <Form />
+<Produits  texte="Fruits" texte2="Vegetables" ingredient={PRODUCTS[3].name} prix={PRODUCTS[3].price}  />
+
+
+
 </div>
   
   
